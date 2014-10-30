@@ -1,6 +1,9 @@
 <Title:>
 	{{$render.ns}} Example..
 
+<Head:>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 <Body:>
 	<div id="layout" class="pure-g">
 		<div class="sidebar pure-u-1 pure-u-md-1-4">
@@ -18,7 +21,7 @@
     </div>
     <div class="content pure-u-1 pure-u-md-3-4">
       {{if _page.component}}
-      <a href="/">home</a> &raquo; <a href="{{_page.component}}">{{_page.component}}</a>
+      <p><a href="/">home</a> &raquo; <a href="{{_page.component}}">{{_page.component}}</a></p>
       {{/}}
 			<view name={{$render.ns}}></view>
 		</div>
@@ -46,8 +49,9 @@
 		<h2>Cropped! Result:</h2>
 		<p>{{_page.result}}</p>
 	{{/}}
+  <img src="http://www.wpclipart.com/famous/science/Einstein/Einstein_portrait.jpg">
 	{{if !_page.cropthis}}
-		<p><button class="pure-button" on-click="crop()">Crop another</button></p>
+		<p style="margin-top:2em"><button class="pure-button" on-click="crop('http://www.wpclipart.com/famous/science/Einstein/Einstein_portrait.jpg')">Crop this photo</button></p>
 	{{/}}
 
 <d-light-box-example:>
@@ -57,3 +61,6 @@
     <img src="https://farm4.staticflickr.com/3766/13169486404_1342fc8c98_b.jpg">
     <img src="https://farm8.staticflickr.com/7434/13072388233_9fb9335319_b.jpg">
   </div>
+
+<d-pagedown-example:>
+  <view name="d-pagedown" autofocus="true" name_="comment[body]" placeholder="Leave a comment..." class="xautoresize" id="d-pagedown" text="{{#root._page.text}}"></view>  

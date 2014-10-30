@@ -16,6 +16,7 @@
     "d-connection-alert": "*",
     "d-image-crop": "*",
     "d-light-box": "*",
+    "d-pagedown": "^0.1.1",
     "derby": "*",
     "derby-starter": "git://github.com/ilkkah/derby-starter#master",
     "derby-stylus": "*",
