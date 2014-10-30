@@ -11,17 +11,19 @@
     "url": "git://github.com/derbyjs/component-examples.git"
   },
   "dependencies": {
-    "derby": "0.6.x",
-    "derby-starter": "^0.2.0",
-    "derby-stylus": "^0.1.0",
-    "l-progress": "^1.0.0",
-    "l-upload": "^1.0.0",
-    "d-lorem": "*",
-    "coffee-script": "^1.7.1",
-    "d-share": "^0.1.0",
-    "d-datepicker": "^0.3.0",
-    "d-material": "^0.0.10",
-    "d-leaflet": "^0.0.2"
+    "coffee-script": "~1.7.1",
+    "d-before-unload": "*",
+    "d-connection-alert": "*",
+    "racer": "*",
+    "racer-highway": "*",
+    "racer-bundle": "*",
+    "share": "*",
+    "livedb-mongo": "*",
+    "derby": "*",
+    "derby-starter": "*",
+    "derby-stylus": "*",
+    "express": "~3",
+    "d-image-crop": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {}
