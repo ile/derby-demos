@@ -10,13 +10,16 @@ app.component require 'd-pagedown'
 app.get '/', ->
   components = [
       name: 'd-image-crop'
-      descr: '<p><img src="https://cloud.githubusercontent.com/assets/433707/4425354/d54aab9c-45a8-11e4-8c94-ceb935c4be1d.png"></p><p><a href="https://github.com/ile/d-image-crop" target="_blank">GitHub</a></p>'
+      descr: '<p><img src="https://cloud.githubusercontent.com/assets/433707/4425354/d54aab9c-45a8-11e4-8c94-ceb935c4be1d.png"></p>'
+      github: "https://github.com/ile/d-image-crop"
     ,
       name: 'd-light-box'
-      descr: '<p>Very light lightbox.</p><p><a href="https://github.com/ile/d-light-box" target="_blank">GitHub</a></p>'
+      descr: '<p>Very light lightbox.</p>'
+      github: "https://github.com/ile/d-light-box"
     ,
       name: 'd-pagedown'
-      descr: '<p>Markdown editor.</p><p><a href="https://github.com/ile/d-pagedown" target="_blank">GitHub</a></p>'
+      descr: '<p>Markdown editor.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/4852253/fa1fb49e-6079-11e4-8fdc-743660dea3cb.png"></p>'
+      github: "https://github.com/ile/d-pagedown"
   ]
   @model.set '_page.components', components
   @render 'home'

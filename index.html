@@ -30,12 +30,11 @@
 
 <home:>
 		{{each _page.components as #c}}
-
 				<section class="post">
           <header class="post-header">
               <h2 class="post-title"><a href="{{#c.name}}">{{#c.name}}</a></h2>
           </header>
-
+          <div class="dim"><a href="{{#c.github}}"><i class="fa fa-github"></i> GitHub</a></div>
           <div class="post-description">
               {{unescaped #c.descr}}
           </div>
