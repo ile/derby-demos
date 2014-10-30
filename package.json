@@ -12,20 +12,23 @@
   },
   "dependencies": {
     "coffee-script": "~1.7.1",
-    "express": "~3",
-    "express-session": "*",
-    "redis": "0.12.1",
     "d-before-unload": "*",
     "d-connection-alert": "*",
-    "racer": "*",
-    "racer-highway": "*",
-    "racer-bundle": "*",
-    "share": "*",
-    "livedb-mongo": "*",
+    "d-image-crop": "*",
+    "d-light-box": "*",
     "derby": "*",
     "derby-starter": "git://github.com/ilkkah/derby-starter#master",
     "derby-stylus": "*",
-    "d-image-crop": "*"
+    "express": "~3",
+    "express-session": "*",
+    "install": "^0.1.7",
+    "livedb-mongo": "*",
+    "npm": "^2.1.5",
+    "racer": "*",
+    "racer-bundle": "*",
+    "racer-highway": "*",
+    "redis": "0.12.1",
+    "share": "*"
   },
   "engines": {
     "node": "0.10.x"

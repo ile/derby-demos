@@ -17,6 +17,9 @@
         </div>
     </div>
     <div class="content pure-u-1 pure-u-md-3-4">
+      {{if _page.component}}
+      <a href="/">home</a> &raquo; <a href="{{_page.component}}">{{_page.component}}</a>
+      {{/}}
 			<view name={{$render.ns}}></view>
 		</div>
 	</div>
@@ -31,7 +34,7 @@
           </header>
 
           <div class="post-description">
-              <p>{{unescaped #c.descr}}</p>
+              {{unescaped #c.descr}}
           </div>
       </section>
 
@@ -46,3 +49,11 @@
 	{{if !_page.cropthis}}
 		<p><button class="pure-button" on-click="crop()">Crop another</button></p>
 	{{/}}
+
+<d-light-box-example:>
+  <d-light-box selector=".box-container img"></d-light-box>
+  <div class="box-container">
+    <img src="https://farm8.staticflickr.com/7252/13994069235_0df17bdc0f_h.jpg">
+    <img src="https://farm4.staticflickr.com/3766/13169486404_1342fc8c98_b.jpg">
+    <img src="https://farm8.staticflickr.com/7434/13072388233_9fb9335319_b.jpg">
+  </div>
