@@ -65,4 +65,9 @@
   </div>
 
 <d-pagedown-example:>
-  <view name="d-pagedown" autofocus="true" name_="comment[body]" placeholder="Leave a comment..." class="xautoresize" id="d-pagedown" text="{{#root._page.text}}"></view>  
+  <p>Note: this is just an editor, this won't convert Markdown into HTML - you can use <a href="https://github.com/chjj/marked">marked</a> for converting, for example.</p>
+  <view name="d-pagedown" name_="comment[body]" placeholder="Leave a comment..." id="d-pagedown" text="{{#root._page.text}}"></view>
+
+<d-textarea-example:>
+  <view name="d-textarea" name_="comment[body]" placeholder="Leave a comment..." text="{{#root._page.text}}"></view>
+
