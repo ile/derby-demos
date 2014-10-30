@@ -11,22 +11,6 @@
     "url": "git://github.com/derbyjs/component-examples.git"
   },
   "dependencies": {
-    "coffee-script": "~1.7.1",
-    "express": "~3",
-    "express-session": "*",
-    "redis": "0.12.1",
-    "connect-redis": "*",
-    "d-before-unload": "*",
-    "d-connection-alert": "*",
-    "racer": "*",
-    "racer-highway": "*",
-    "racer-bundle": "*",
-    "share": "*",
-    "livedb-mongo": "*",
-    "derby": "*",
-    "derby-starter": "git://github.com/ilkkah/derby-starter#master",
-    "derby-stylus": "*",
-    "d-image-crop": "*"
   },
   "engines": {
     "node": "0.10.x"
