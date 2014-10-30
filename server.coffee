@@ -8,4 +8,4 @@ if process.env.REDIS_PORT_6379_TCP_ADDR
 if process.env.REDIS_PORT_6379_TCP_PORT
   process.env.REDIS_PORT = process.env.REDIS_PORT_6379_TCP_PORT
 process.env.MONGO_DB = "component-examples"
-require('derby-starter').run __dirname, {port: 3000}
+require('derby-starter').run __dirname
