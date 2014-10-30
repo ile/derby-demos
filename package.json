@@ -25,6 +25,9 @@
     "express": "~3",
     "d-image-crop": "*"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "devDependencies": {},
   "optionalDependencies": {}
 }
