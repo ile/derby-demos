@@ -22,7 +22,7 @@
     "derby": "*",
     "derby-starter": "*",
     "derby-stylus": "*",
-    "express": "~3",
+    "express": "~3.4.8",
     "d-image-crop": "*"
   },
   "engines": {
