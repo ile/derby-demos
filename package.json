@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "coffee-script": "~1.7.1",
+    "express": "~3.4.8",
     "d-before-unload": "*",
     "d-connection-alert": "*",
     "racer": "*",
@@ -22,7 +23,6 @@
     "derby": "*",
     "derby-starter": "*",
     "derby-stylus": "*",
-    "express": "~3.4.8",
     "d-image-crop": "*"
   },
   "engines": {
