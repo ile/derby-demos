@@ -44,6 +44,7 @@
 		{{/each}}
 
 <d-image-crop-example:>
+  <p>Note: this is the image cropper ui widget; you will have to do the actual file manipulation server side with software like <a href="http://aheckmann.github.io/gm/" target="_blank">graphicsmagick</a> or imagemagick.</p>
 	<d-image-crop src="{{_page.cropthis}}" on-submit="cropped()"></d-image-crop>
 	{{if _page.result}}
 		<h2>Cropped! Result:</h2>
