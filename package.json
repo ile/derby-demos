@@ -1,5 +1,5 @@
 {
-  "name": "derby-component-examples",
+  "name": "derby-demos",
   "description": "",
   "version": "0.1.0",
   "publishConfig": {},
@@ -8,9 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/derbyjs/component-examples.git"
+    "url": "git://github.com/ile/derby-demos.git"
   },
   "dependencies": {
+    "coffee-script": "~1.7.1",
+    "express": "~3",
+    "redis": "0.12.1",
+    "d-before-unload": "*",
+    "d-connection-alert": "*",
+    "racer": "*",
+    "racer-highway": "*",
+    "racer-bundle": "*",
+    "share": "*",
+    "livedb-mongo": "*",
+    "derby": "*",
+    "derby-starter": "git://github.com/ilkkah/derby-starter#master",
+    "derby-stylus": "*",
+    "d-image-crop": "*"
   },
   "engines": {
     "node": "0.10.x"
