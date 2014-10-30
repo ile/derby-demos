@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "coffee-script": "~1.7.1",
-    "express": "~3.4.8",
-    "express-session": "1.9.1",
+    "express": "~3",
+    "express-session": "*",
     "redis": "0.12.1",
-    "connect-redis": "1.4.7",
+    "connect-redis": "*",
     "d-before-unload": "*",
     "d-connection-alert": "*",
     "racer": "*",
