@@ -3,7 +3,8 @@ var coffeeify = require('coffeeify');
 var derby = require('derby');
 var express = require('express');
 var redis = require('redis');
-var RedisStore = require('connect-redis')(express);
+var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
 var highway = require('racer-highway');
 var liveDbMongo = require('livedb-mongo');
 var parseUrl = require('url').parse;
@@ -56,14 +57,6 @@ function setup(app, options, cb) {
 
   var handlers = highway(store);
 
-  var sto = new RedisStore({
-        host: process.env.REDIS_HOST || "localhost",
-        port: process.env.REDIS_PORT || 6379,
-        pass: process.env.REDIS_PASSWORD || null
-    });
-
-  console.log(sto);
-
   var expressApp = express()
     .use(express.favicon())
     // Gzip dynamically rendered content
@@ -76,7 +69,11 @@ function setup(app, options, cb) {
     .use(express.cookieParser())
     .use(express.session({
       secret: process.env.SESSION_SECRET || 'YOUR SECRET HERE'
-    , store: sto
+    , store: new RedisStore({
+        host: process.env.REDIS_HOST || "localhost",
+        port: process.env.REDIS_PORT || 6379,
+        pass: process.env.REDIS_PASSWORD || null
+      })
     }))
     .use(handlers.middleware)
     .use(createUserId)
