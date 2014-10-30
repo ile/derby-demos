@@ -21,7 +21,7 @@
     "share": "*",
     "livedb-mongo": "*",
     "derby": "*",
-    "derby-starter": "git://github.com/ilkkah/derby-starter#master",
+    "derby-starter": "git://github.com/ilkkah/derby-starter#f27c8b0538844fdae49573e301a7e097a0c5110c",
     "derby-stylus": "*",
     "d-image-crop": "*"
   },
