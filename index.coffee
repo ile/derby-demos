@@ -8,6 +8,17 @@ app.component require 'd-photo-upload'
 app.component require 'd-light-box'
 app.component require 'd-textarea'
 app.component require 'd-pagedown'
+app.component require 'derby-ui-toast'
+
+toasts = [
+    info: 'For your information: ...'
+  ,
+    success: 'Whew, it worked!'
+  ,
+    warning: 'Careful now, there! Something\'s going to go possibly very wrong.'
+  ,
+    error: 'Too bad, an error happened.'
+]
 
 components = [
     name: 'd-image-crop'
@@ -29,6 +40,10 @@ components = [
     name: 'd-pagedown'
     descr: '<p>Markdown editor.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/4852253/fa1fb49e-6079-11e4-8fdc-743660dea3cb.png"></p>'
     github: "https://github.com/ile/d-pagedown"
+  ,
+    name: 'derby-ui-toast'
+    descr: '<p>Notification messages (toasts).</p><p><img src="https://camo.githubusercontent.com/ffd5bd926d83c1328326d0e7952fefb0d9f65c12/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3433333730372f3936363435302f35373166366237322d303534392d313165332d393436622d3862303632383739643763352e706e67"></p>'
+    github: "https://github.com/ile/derby-ui-toast"
 ]
 
 app.get '/', ->
@@ -61,4 +76,12 @@ app.proto.handleError = (err) ->
 app.proto.uploaded = (result) ->
   if result?.url
     @model.set '_page.photo', result.url
+
+app.proto.t2 = ->
+  @model.toast(error: 'err2')
+
+app.proto.toast2 = ->
+  i = Math.floor(Math.random() * 4)
+  console.log i
+  @model.toast(toasts[i])
 
