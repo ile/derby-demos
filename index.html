@@ -71,3 +71,7 @@
 <d-textarea-example:>
   <view name="d-textarea" name_="comment[body]" placeholder="Leave a comment..." text="{{#root._page.text}}"></view>
 
+<d-photo-upload-example:>
+  <p>Click the image to upload a new one or drag and drop a new image over it.</p>
+  <d-photo-upload on-uploaded="uploaded()" on-err="handleError()" url="/upload" class="file-input" inputname="photo" src="{{_page.photo}}" lang="en"></d-photo-upload>
+
