@@ -77,4 +77,9 @@
 <derby-ui-toast-example:>
   <view name="derby-ui-toast"></view>
   <p>Toasts are short notifications messages that pop up somewhere on the screen at times.</p>
-  <p><button class="pure-button pure-button-primary" on-click="toast2()">Add a toast</button></p>
+  <p><button class="pure-button pure-button-primary" on-click="toast()">Add a toast</button></p>
+
+<derby-flash-example:>
+  <p>Flash messages are short notifications messages that are a bit like toasts. However, there is an important difference; they are used when going to another url, while toasts are used on the same page and appear instantly. Flash messages appear only when the url is changed.</p>
+  <view name="derby-flash"></view>
+  <p><button class="pure-button pure-button-primary" on-click="flash()">Add a flash message and go to another (random) page</button></p>

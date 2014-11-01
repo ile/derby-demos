@@ -20,6 +20,7 @@
     "d-photo-upload": "*",
     "d-textarea": "*",
     "derby": "*",
+    "derby-flash": "*",
     "derby-starter": "git://github.com/ilkkah/derby-starter#master",
     "derby-stylus": "*",
     "derby-ui-toast": "*",

@@ -9,15 +9,16 @@ app.component require 'd-light-box'
 app.component require 'd-textarea'
 app.component require 'd-pagedown'
 app.component require 'derby-ui-toast'
+app.component(require('derby-flash')(app))
 
 toasts = [
-    info: 'For your information: ...'
+    info: 'The fastest land animal is the Cheetah which has a recorded speed of 96–120 km/h (60–75 mph). <img style="width:200px; display: block" src="http://m.c.lnkd.licdn.com/mpr/mpr/p/7/005/085/3a7/328dc29.jpg">'
   ,
     success: 'Whew, it worked!'
   ,
-    warning: 'Careful now, there! Something\'s going to go possibly very wrong.'
+    warning: 'Careful now, there!'
   ,
-    error: 'Too bad, an error happened.'
+    error: 'Too bad, an error happened. :('
 ]
 
 components = [
@@ -44,6 +45,10 @@ components = [
     name: 'derby-ui-toast'
     descr: '<p>Notification messages (toasts).</p><p><img src="https://camo.githubusercontent.com/ffd5bd926d83c1328326d0e7952fefb0d9f65c12/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3433333730372f3936363435302f35373166366237322d303534392d313165332d393436622d3862303632383739643763352e706e67"></p>'
     github: "https://github.com/ile/derby-ui-toast"
+  ,
+    name: 'derby-flash'
+    descr: '<p>Notification messages (flash). A bit similar to toasts but different.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/4265716/454049a8-3c5c-11e4-9c0a-9eb06539ed0a.png"></p>'
+    github: "https://github.com/ile/derby-ui-toast"
 ]
 
 app.get '/', ->
@@ -52,6 +57,10 @@ app.get '/', ->
  
 app.get '/:component', ->
   @upload()  if @params.component is 'd-photo-upload'
+  @model.set '_page.component', find(@params.component)
+  @render @params.component + '-example'
+
+app.get '/:component/:page', ->
   @model.set '_page.component', find(@params.component)
   @render @params.component + '-example'
 
@@ -77,11 +86,11 @@ app.proto.uploaded = (result) ->
   if result?.url
     @model.set '_page.photo', result.url
 
-app.proto.t2 = ->
-  @model.toast(error: 'err2')
-
-app.proto.toast2 = ->
+app.proto.toast = ->
   i = Math.floor(Math.random() * 4)
-  console.log i
-  @model.toast(toasts[i])
+  @model.toast toasts[i]
 
+app.proto.flash = ->
+  i = Math.floor(Math.random() * 4)
+  @model.flash toasts[i]
+  @app.history.push '/derby-flash/' + Date.now()
