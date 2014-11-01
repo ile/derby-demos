@@ -17,6 +17,7 @@
     "d-image-crop": "*",
     "d-light-box": "*",
     "d-pagedown": "*",
+    "d-passport": "^0.4.4",
     "d-photo-upload": "*",
     "d-textarea": "*",
     "derby": "*",
