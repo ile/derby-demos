@@ -48,7 +48,7 @@ components = [
   ,
     name: 'derby-flash'
     descr: '<p>Notification messages (flash). A bit similar to toasts but different.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/4265716/454049a8-3c5c-11e4-9c0a-9eb06539ed0a.png"></p>'
-    github: "https://github.com/ile/derby-ui-toast"
+    github: "https://github.com/ile/derby-flash"
 ]
 
 app.get '/', ->
