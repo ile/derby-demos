@@ -8,6 +8,7 @@ app.component require 'd-photo-upload'
 app.component require 'd-light-box'
 app.component require 'd-textarea'
 app.component require 'd-pagedown'
+app.component require 'd-dialog'
 app.component require 'derby-ui-toast'
 app.component(require('derby-flash')(app))
 
@@ -22,6 +23,10 @@ toasts = [
 ]
 
 components = [
+    name: 'd-dialog'
+    descr: '<p>A simple dialog component.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/5057576/d54cf57e-6cd0-11e4-94b5-200f02542518.png"></p>'
+    github: "https://github.com/ile/d-dialog"
+  ,
     name: 'd-image-crop'
     descr: '<p>A simple image cropper.</p><p><img src="https://cloud.githubusercontent.com/assets/433707/4425354/d54aab9c-45a8-11e4-8c94-ceb935c4be1d.png"></p>'
     github: "https://github.com/ile/d-image-crop"

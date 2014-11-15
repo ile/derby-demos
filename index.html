@@ -87,3 +87,26 @@
 
 <d-passport-example:>
   <p>See the demo for d-passport here: <a target="_blank" href="https://d-passport.herokuapp.com">https://d-passport.herokuapp.com</a></p>
+  <p>The source code for d-passport demo is here: <a target="_blank" href="https://github.com/ile/d-passport-example">https://github.com/ile/d-passport-example</a>.</p>
+
+<d-dialog-example:>
+  <p><button class="pure-button pure-button-primary" on-click="loginDialog.show($event)">Open login dialog</button></p>
+  <d-dialog as="loginDialog">
+    <h2>Login</h2>
+    <form class="pure-form pure-form-stacked" method="post" action="/login" data-router-ignore="">
+      <fieldset class="pure-u-1-1">
+        <div class="pure-control-group left">
+          <label for="email">Username</label>
+          <input tabindex="1" class="pure-input-1" autofocus id="email" type="text" name="username">
+        </div>
+        <div class="pure-control-group left">
+          <label for="password">Password<a data-router-ignore="" class="pull-right smaller italic gray margin-top-7 t" href="/password-reset">Need password remainder?</a></label>
+          <input tabindex="2" class="pure-input-1" id="password" type="password" name="password">
+        </div>
+        <div class="pure-control-group center">
+          <br>
+          <button tabindex="3" type="submit" class="pure-button pure-button-primary pure-button-wide"><i class="fa fa-sign-in"></i> Sign in</button>
+        </div>
+      </fieldset>
+    </form>
+  </d-dialog>
